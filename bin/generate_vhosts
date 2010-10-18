@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require 'generate_vhosts'
+require 'optparse'
+
+OptionParser.new do |opts|
+  opts.banner = "Usage: generate_vhosts [options]"
+
+  opts.on("-d", "--directory DIR", "The directory your projects are located, defaults to ~/code") do |d|
+    @dir = d
+  end
+
+  opts.on_tail("-h", "--help", "Show this help message.") do
+   puts opts;
+   exit
+ end
+end.parse!
+
+if @dir
+  puts GenerateVhosts.new(@dir).vhosts
+else
+  puts GenerateVhosts.new.vhosts
+end
