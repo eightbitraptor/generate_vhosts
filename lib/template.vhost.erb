@@ -7,5 +7,6 @@
     <Directory <%= File.expand_path(File.join(@code_dir, @app_dir, "public")) %>>
       Order allow,deny
       Allow from all
+      Options -MultiViews
     </Directory>
 </VirtualHost>

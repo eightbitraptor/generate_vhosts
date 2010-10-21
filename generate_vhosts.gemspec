@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name              = "generate_vhosts"
-  s.version           = "0.1.0"
+  s.version           = "0.1.1"
   s.summary           = "Generate vhosts for all rack apps in a given directory"
   s.author            = "Matt House"
   s.email             = "matt@eightbitraptor.com"
